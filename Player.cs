@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Text.Adv.mit_Greg
 {
-    class Player1//
+    class Player//
     {
         public string name;
         public int coins = 0;
@@ -20,7 +20,7 @@ namespace Text.Adv.mit_Greg
         //public City CurrentCity;
         // public string ImportCity;
 
-        public static Player1 p = new Player1();
+        public static Player p = new Player();
 
         
     }
