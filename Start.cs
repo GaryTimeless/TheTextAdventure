@@ -18,35 +18,17 @@ namespace Text.Adv.mit_Greg
         public static Random rand = new Random();
 
 
-        static Player NewStart(int i)
+        static Player NewStart()
         {
             Console.Clear();
             Player p = new Player();
-
-            Console.WriteLine(" Willkomen in Text Adventure ");
-
-
-
-            Console.WriteLine("Wie heißt du Krieger?");
-
-        
-
-            currentPlayer.name = Console.ReadLine();
-            Console.ReadKey();
+            Console.WriteLine(" Willkomen in Text Adventure ")
+                  Console.WriteLine("Wie heißt du Krieger?");
+                      currentPlayer.name = Console.ReadLine();
+                 Console.ReadKey();
             Console.Clear();
             return p;
         }
-        public static void CreatePlayer()
-        {
-            Player p = new Player();
-
-            Console.WriteLine(" Willkomen in Text Adventure ");
-
-
-
-            Console.WriteLine("Wie heißt du Krieger?");
-
-            currentPlayer.name = Console.ReadLine();
-        }
+       
     }
 }
