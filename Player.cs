@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Text.Adv.mit_Greg
 {
-    class Player//
+   public class Player//
     {
         public string name;
         public int coins = 0;
@@ -14,6 +14,7 @@ namespace Text.Adv.mit_Greg
         public int potion = 0;
         public int weaponValue = 0;
         public int runspeed = 0;
+        public string typ;
         //public int id;
 
         public int mods = 0;
@@ -22,6 +23,11 @@ namespace Text.Adv.mit_Greg
 
         public static Player p = new Player();
 
-        
+        public static void TravelBag()
+        {
+            Console.WriteLine("You got " + Player.p.potion +"potions");
+
+        }
     }
+   
 }
