@@ -50,10 +50,16 @@ namespace Text.Adv.mit_Greg
             Console.ReadKey();
             Console.Clear();
         }
-
+        static Regex ChooseFraktion = new Regex("^[1-2]$");// ("^[]$")
         public static void ChooseFraction() 
         {
-            Console.WriteLine(@"Welcome " + Player.p.name + @" to Ra-e Kesh
+            int  typ = 0;
+            while (!ChooseFraktion.IsMatch(typ.ToString()))
+            {
+                try
+                {
+                    Console.Clear();
+                    Console.WriteLine(@"Welcome " + Player.p.name + @" to Ra-e Kesh
 
 
                         please choose your discipline
@@ -61,9 +67,14 @@ namespace Text.Adv.mit_Greg
                         2.Magician
                         ");
 
-            Console.WriteLine("Please enter a number between the given options.");
-           int typ = Convert.ToInt32(Console.ReadLine());
-          
+                    Console.WriteLine("Please enter a number between the given options.");
+                     typ = Convert.ToInt32(Console.ReadLine());
+                }
+                catch
+                {
+                    Console.WriteLine("Please enter a number between the given options.");
+                }
+            }
               
 
             switch (typ) 
