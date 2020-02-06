@@ -25,6 +25,7 @@ namespace Text.Adv.mit_Greg
                 weaponP = 100 * (p.weaponValue);
                 CasinoP = 100;
                 Console.Clear();
+                Console.WriteLine(Pics.titel4);//
                 Console.WriteLine("<><><><><><><><><><><><><><><><>><><><><><><>><><><><><><>");
                 Console.WriteLine("<>============Taverne===================================<>");
                 Console.WriteLine("<>|(T)rank:$ " + TrankP);

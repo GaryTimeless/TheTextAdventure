@@ -23,13 +23,31 @@ namespace Text.Adv.mit_Greg
 
         public static void CreatePlayer()
         {
-            Console.WriteLine(" Willkomen in Text Adventure ");
+            Console.WriteLine(Pics.title);
+            Console.WriteLine(@" Welcome to the Text Adventrue The myth of Ra-e Kesh.
+
+
+            You arrived at Ra - e Kesh.A land divided in 3 regions.
+
+
+
+            The forest of Raash
+
+                    the springs of Nasmah
+
+
+                            & Metherwhere
+
+            Feel free to look arround, master your discipline and
+            encounter legends, myths and the unknown...");
                  Console.WriteLine("Whats your name? ");
     
           Player.p.name = Console.ReadLine();
                      Console.ReadKey();
                          Console.Clear();
           Console.WriteLine("Willkommen " + Player.p.name + " um dich in dieser Welt zurecht zufinden benutze bitte die möglichen Befehle und Enter");
+           
+            Console.ReadKey();
             Console.Clear();
         }
 
