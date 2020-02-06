@@ -22,7 +22,19 @@ namespace Text.Adv.mit_Greg
             String SAVEGAME = (Player.p.health + "\n" + Player.p.damage + "\n" + Player.p.coins + "\n" + Player.p.armorValue + "\n" + Player.p.runspeed + "\n" + Player.p.potion +
                  "\n" + Player.p.weaponValue + "\n" + Player.p.typ + "\n" + Player.p.CurrentCity.Name + "\n" + Player.p.Level);
 
-            Console.WriteLine(SAVEGAME);
+            Console.WriteLine(@"Typ: " + Player.p.typ + "\n" +
+                                   "Health: " + Player.p.health + "\n" +
+                                   "Damage: " + Player.p.damage + "\n" +
+                                   "ArmorValue: " + Player.p.armorValue + "\n" +
+                                   "Runspeed: " + Player.p.runspeed + "\n" +
+                                   "WeaponValue: " + Player.p.weaponValue + "\n" +
+
+                                   "Coins: " + Player.p.coins + "\n" +
+                                   "Potion: " + Player.p.potion + "\n" +
+
+                                   "Level: " + Player.p.Level);
+
+            Console.WriteLine("SpeicherDatei wurde erstell.");
 
             Console.ReadKey();
 

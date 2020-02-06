@@ -5,7 +5,7 @@ using System.Text;
 namespace Text.Adv.mit_Greg
 {
    public class Player//
-    {
+    { 
         public string name;
         public int coins = 0;
         public int health = 0;

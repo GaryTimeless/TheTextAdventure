@@ -80,8 +80,11 @@ namespace Text.Adv.mit_Greg
             Player.p.CurrentCity = City.Drana;
             Player.p.Level = 1;
 
+                    typ5();
 
-                    Text.Adv.mit_Greg.SaveGame.SaveGameData(); 
+
+
+                    
 
             break;
             case 2:
@@ -97,7 +100,7 @@ namespace Text.Adv.mit_Greg
             Player.p.CurrentCity = City.Mandrial;
             Player.p.Level = 1;
 
-                    Text.Adv.mit_Greg.SaveGame.SaveGameData();
+                    typ5();
 
 
                     break;
@@ -121,6 +124,13 @@ namespace Text.Adv.mit_Greg
         }
 
 
-    
+        static void typ5()
+        {
+            Text.Adv.mit_Greg.SaveGame.SaveGameData();
+        }
     }
+
+    
+
+    
 }

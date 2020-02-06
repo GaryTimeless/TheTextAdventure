@@ -15,7 +15,8 @@ namespace Text.Adv.mit_Greg
     public class Program
     {
         public static Random rand = new Random();
-        static Regex ChooseMenue = new Regex("^[1-4]$");  // ("^[]$")
+        static Regex ChooseLoadNEW = new Regex("^[s|l]$");
+        static Regex ChooseMainMenue = new Regex("^[t|l|c|e|s]$");// ("^[]$")
 
 
         static void Main(string[] args)
@@ -27,7 +28,14 @@ namespace Text.Adv.mit_Greg
             Text.Adv.mit_Greg.QuestNPC.CreateNPC();
             while (true) 
             {
-                Console.WriteLine(@"
+
+                string input = "";
+                while (!ChooseLoadNEW.IsMatch(input.ToString()))
+                {
+                    try
+                    {
+                        Console.Clear();
+                        Console.WriteLine(@"
                 
                 What do you want to do?
                 Please enter with the first letter of given options.
@@ -36,7 +44,21 @@ namespace Text.Adv.mit_Greg
      
                 ");
 
-                string input = Console.ReadLine();
+                        Console.WriteLine("please Enter one of the letters in brackets");
+                        input = Console.ReadLine();
+                        
+
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Invalid.");
+
+
+                    }
+
+                }
+
+               
 
                 if (input.ToLower() == "s" || input.ToLower() == "start")
                 {
@@ -65,21 +87,43 @@ namespace Text.Adv.mit_Greg
 
                 //  Console.WriteLine(Game.UserAvatar.CurrentCity.Name);
                 Console.Clear();
+                string input = "";
+                while (!ChooseMainMenue.IsMatch(input.ToString()))
+                {
+                    try
+                    {
 
-                Console.WriteLine(Player.p.health + "\n" + Player.p.damage + "\n" + Player.p.coins + "\n" + Player.p.armorValue + "\n" + Player.p.runspeed + "\n" + Player.p.potion +
-                 "\n" + Player.p.weaponValue + "\n" + Player.p.typ + "\n" + Player.p.CurrentCity.Name + "\n" + Player.p.Level);
 
-                Console.WriteLine(@"
+                        Console.WriteLine(@"Typ: " + Player.p.typ + "\n" +
+                                   "Health: " + Player.p.health + "\n" +
+                                   "Damage: " + Player.p.damage + "\n" +
+                                   "ArmorValue: " + Player.p.armorValue + "\n" +
+                                   "Runspeed: " + Player.p.runspeed + "\n" +
+                                   "WeaponValue: " + Player.p.weaponValue + "\n" +
+
+                                   "Coins: " + Player.p.coins + "\n" +
+                                   "Potion: " + Player.p.potion + "\n" +
+
+                                   "Level: " + Player.p.Level);
+
+                        Console.WriteLine(@"
                 
-                What do you want to do?
-                Please enter with the first letter of given options.
-                1. (T)ravel to another city
-                2. (L)ook arround
-                3. (C)heck my travelBag
-                4. (E)nd Game
-                <> (S)ave game<>
-                ");
-                string input = Console.ReadLine();
+                        What do you want to do?
+                        Please enter with the first letter of given options.
+                        1. (T)ravel to another city
+                        2. (L)ook arround
+                        3. (C)heck my travelBag
+                        4. (E)nd Game
+                        <> (S)ave game<>
+                        ");
+                        input = Console.ReadLine();
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Invalid input");
+                    }
+
+                }
 
                 if (input.ToLower() == "s" || input.ToLower() == "save")
                 {
