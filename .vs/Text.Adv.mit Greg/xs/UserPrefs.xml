@@ -1,0 +1,28 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Start.cs">
+    <Files>
+      <File FileName="Program.cs" Line="19" Column="1" />
+      <File FileName="Player.cs" Line="1" Column="1" />
+      <File FileName="Start.cs" Line="1" Column="1" />
+      <File FileName="Class Encouters.cs" Line="1" Column="1" />
+      <File FileName="Quest.cs" Line="1" Column="1" />
+      <File FileName="Travel.cs" Line="26" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Text.Adv.mit Greg" expanded="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <DisabledProjects>
+    <String>Text.Adv.mit Greg.csproj</String>
+  </DisabledProjects>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
