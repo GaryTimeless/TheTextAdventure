@@ -1,0 +1,11 @@
+/Users/gregoryschenk/Documents/GitHub/TheTextAdventure/bin/Debug/netcoreapp3.1/Text.Adv.mit Greg
+/Users/gregoryschenk/Documents/GitHub/TheTextAdventure/bin/Debug/netcoreapp3.1/Text.Adv.mit Greg.deps.json
+/Users/gregoryschenk/Documents/GitHub/TheTextAdventure/bin/Debug/netcoreapp3.1/Text.Adv.mit Greg.runtimeconfig.json
+/Users/gregoryschenk/Documents/GitHub/TheTextAdventure/bin/Debug/netcoreapp3.1/Text.Adv.mit Greg.runtimeconfig.dev.json
+/Users/gregoryschenk/Documents/GitHub/TheTextAdventure/bin/Debug/netcoreapp3.1/Text.Adv.mit Greg.dll
+/Users/gregoryschenk/Documents/GitHub/TheTextAdventure/bin/Debug/netcoreapp3.1/Text.Adv.mit Greg.pdb
+/Users/gregoryschenk/Documents/GitHub/TheTextAdventure/obj/Debug/netcoreapp3.1/Text.Adv.mit Greg.csprojAssemblyReference.cache
+/Users/gregoryschenk/Documents/GitHub/TheTextAdventure/obj/Debug/netcoreapp3.1/Text.Adv.mit Greg.AssemblyInfoInputs.cache
+/Users/gregoryschenk/Documents/GitHub/TheTextAdventure/obj/Debug/netcoreapp3.1/Text.Adv.mit Greg.AssemblyInfo.cs
+/Users/gregoryschenk/Documents/GitHub/TheTextAdventure/obj/Debug/netcoreapp3.1/Text.Adv.mit Greg.dll
+/Users/gregoryschenk/Documents/GitHub/TheTextAdventure/obj/Debug/netcoreapp3.1/Text.Adv.mit Greg.pdb

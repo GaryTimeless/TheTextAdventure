@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Text.Adv.mit Greg/1.0.0": {
+        "runtime": {
+          "Text.Adv.mit Greg.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Text.Adv.mit Greg/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
