@@ -39,6 +39,7 @@ namespace Text.Adv.mit_Greg
                             & Metherwhere
 
             Feel free to look arround, master your discipline and
+<<<<<<< HEAD
             encounter legends, myths and the unknown...");
             Console.WriteLine("Whats your name? ");
             Regex ChooseName = new Regex("^[s|l]$");
@@ -75,6 +76,23 @@ namespace Text.Adv.mit_Greg
         {
                  
                 int  typ = 0;
+=======
+            encounter legends, myths and the unknown...");
+                 Console.WriteLine("Whats your name? ");
+    
+          Player.p.name = Console.ReadLine();
+                     Console.ReadKey();
+                         Console.Clear();
+          Console.WriteLine("Willkommen " + Player.p.name + " um dich in dieser Welt zurecht zufinden benutze bitte die möglichen Befehle und Enter");
+           
+            Console.ReadKey();
+            Console.Clear();
+        }
+        static Regex ChooseFraktion = new Regex("^[1-2]$");// ("^[]$")
+        public static void ChooseFraction() 
+        {
+            int  typ = 0;
+>>>>>>> 0c12579634223277643ce1733c3d59cb3fc897c7
             while (!ChooseFraktion.IsMatch(typ.ToString()))
             {
                 try
