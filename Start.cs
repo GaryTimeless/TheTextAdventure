@@ -80,12 +80,15 @@ namespace Text.Adv.mit_Greg
             Player.p.CurrentCity = City.Drana;
             Player.p.Level = 1;
 
+
+                    Text.Adv.mit_Greg.SaveGame.SaveGameData(); 
+
             break;
             case 2:
 
             Player.p.health = 10;
             Player.p.damage = 2;
-            Player.p.coins = 200;
+            Player.p.coins = 20000;
             Player.p.armorValue = 1;
             Player.p.runspeed = 3;
             Player.p.potion = 10;
@@ -94,9 +97,10 @@ namespace Text.Adv.mit_Greg
             Player.p.CurrentCity = City.Mandrial;
             Player.p.Level = 1;
 
-    
+                    Text.Adv.mit_Greg.SaveGame.SaveGameData();
 
-            break;
+
+                    break;
                   
             }
             Console.Clear();

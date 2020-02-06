@@ -30,9 +30,9 @@ namespace Text.Adv.mit_Greg
                 Console.WriteLine("<>============Taverne===================================<>");
                 Console.WriteLine("<>|(T)rank:$ " + TrankP);
                 Console.WriteLine("<>|                          ");
-                Console.WriteLine("<>|(W)affe:$ " + armorP);
+                Console.WriteLine("<>|(W)affe:$ " + weaponP);
                 Console.WriteLine("<>|                         ");
-                Console.WriteLine("<>|(R)üstung:$ " + weaponP);
+                Console.WriteLine("<>|(R)üstung:$ " + armorP);
                 Console.WriteLine("<>|                          ");
                 Console.WriteLine("<>|(K)artenspiel:$" + CasinoP);
                 Console.WriteLine("<>======================================================<>");
@@ -87,7 +87,7 @@ namespace Text.Adv.mit_Greg
         {
             if (p.coins >= cost)// Variablen werden erhöht. 
             {
-                if (item == "Trank")
+                if (item == "trank")
                     p.potion++;
                 else if (item == "waffe")
                     p.weaponValue++;
