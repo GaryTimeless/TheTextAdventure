@@ -117,7 +117,7 @@ namespace Text.Adv.mit_Greg
                     }
                     int attack = rand.Next(1, Player.p.weaponValue) / 2;
 
-                    Console.WriteLine("Du verlierst " + damage + " Gesundheit und machst " + attack + "Schaden");
+                    Console.WriteLine(" You lost" + damage + "  HP  but you deal  " + attack + "damage ");
                     Player.p.health -= damage;
                     h -= attack;
 
@@ -133,14 +133,14 @@ namespace Text.Adv.mit_Greg
 
                     if (r < Player.p.runspeed)
                     {
-                        Console.WriteLine("Du bist entkommen du bewegst dich schneller als" + n);
+                        Console.WriteLine("wow done you have been faster" + n);
                         Quest.StoryLine(Player.p.CurrentCity);
 
                         //go to another pleace
                     }
                     else if (r > Player.p.runspeed)
                     {
-                        Console.WriteLine(n + " war schneeler wie du!! du bekommst " + damage + " schaden");
+                        Console.WriteLine(n + " is way faster than you, you got " + damage + " damaga ");
 
                     }
                    Player.p.health -= damage;
@@ -151,7 +151,7 @@ namespace Text.Adv.mit_Greg
                     //Heal 
                     if (Player.p.potion == 0)
                     {
-                        Console.WriteLine("Du hast keine Tränke mehr..rip");
+                        Console.WriteLine("You have no potions anymore ..rip");
 
                     }
                     else

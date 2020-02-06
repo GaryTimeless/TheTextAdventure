@@ -19,7 +19,7 @@ namespace Text.Adv.mit_Greg
         public static bool mainloop = true;
        
         public static Random rand = new Random();
-        
+
 
         public static void CreatePlayer()
         {
@@ -40,20 +40,47 @@ namespace Text.Adv.mit_Greg
 
             Feel free to look arround, master your discipline and
             encounter legends, myths and the unknown...");
-                 Console.WriteLine("Whats your name? ");
-    
-          Player.p.name = Console.ReadLine();
-                     Console.ReadKey();
-                         Console.Clear();
-          Console.WriteLine("Willkommen " + Player.p.name + " um dich in dieser Welt zurecht zufinden benutze bitte die möglichen Befehle und Enter");
-           
-            Console.ReadKey();
-            Console.Clear();
-        }
+            Console.WriteLine("Whats your name? ");
+            Regex ChooseName = new Regex("^[s|l]$");
+            while (true)
+            {
 
+                string input = "";
+                while (!ChooseName.IsMatch(input.ToString()))
+                {
+                    try
+                    {
+                        Console.WriteLine("Please enter your name. We hope they will sing songs about it and your opponents will fear it");
+                        Player.p.name = Console.ReadLine();
+                        Console.ReadKey();
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Invalid");
+                    }
+                }
+
+
+
+
+                Console.Clear();
+                Console.WriteLine("Willkommen " + Player.p.name + " um dich in dieser Welt zurecht zufinden benutze bitte die möglichen Befehle und Enter");
+
+                Console.ReadKey();
+                Console.Clear();
+            }
+        }
+        static Regex ChooseFraktion = new Regex("^[1-2]$");
         public static void ChooseFraction() 
         {
-            Console.WriteLine(@"Welcome " + Player.p.name + @" to Ra-e Kesh
+                 
+                int  typ = 0;
+            while (!ChooseFraktion.IsMatch(typ.ToString()))
+            {
+                try
+                {
+                    Console.Clear();
+                    Console.WriteLine(@"Welcome " + Player.p.name + @" to Ra-e Kesh
 
 
                         please choose your discipline
@@ -61,9 +88,14 @@ namespace Text.Adv.mit_Greg
                         2.Magician
                         ");
 
-            Console.WriteLine("Please enter a number between the given options.");
-           int typ = Convert.ToInt32(Console.ReadLine());
-          
+                    Console.WriteLine("Please enter a number between the given options.");
+                     typ = Convert.ToInt32(Console.ReadLine());
+                }
+                catch
+                {
+                    Console.WriteLine("Please enter a number between the given options.");
+                }
+            }
               
 
             switch (typ) 
@@ -80,12 +112,18 @@ namespace Text.Adv.mit_Greg
             Player.p.CurrentCity = City.Drana;
             Player.p.Level = 1;
 
+                    typ5();
+
+
+
+                    
+
             break;
             case 2:
 
             Player.p.health = 10;
             Player.p.damage = 2;
-            Player.p.coins = 200;
+            Player.p.coins = 20000;
             Player.p.armorValue = 1;
             Player.p.runspeed = 3;
             Player.p.potion = 10;
@@ -94,9 +132,10 @@ namespace Text.Adv.mit_Greg
             Player.p.CurrentCity = City.Mandrial;
             Player.p.Level = 1;
 
-    
+                    typ5();
 
-            break;
+
+                    break;
                   
             }
             Console.Clear();
@@ -117,6 +156,13 @@ namespace Text.Adv.mit_Greg
         }
 
 
-    
+        static void typ5()
+        {
+            Text.Adv.mit_Greg.SaveGame.SaveGameData();
+        }
     }
+
+    
+
+    
 }

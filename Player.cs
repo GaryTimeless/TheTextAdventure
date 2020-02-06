@@ -5,7 +5,7 @@ using System.Text;
 namespace Text.Adv.mit_Greg
 {
    public class Player//
-    {
+    { 
         public string name;
         public int coins = 0;
         public int health = 0;
@@ -17,11 +17,12 @@ namespace Text.Adv.mit_Greg
         public string typ;
         public City CurrentCity;
         public int Level;
+        
         //public int id;
 
         public int mods = 0;
-        //public City CurrentCity;
-        // public string ImportCity;
+        
+        public string ImportCity;
         public int GetHealth()
         {
             int upper = (2 * mods + 5);
