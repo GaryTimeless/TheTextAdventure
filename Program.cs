@@ -14,7 +14,7 @@ namespace Text.Adv.mit_Greg
 
     public class Program
     {
-
+        public static Random rand = new Random();
         static Regex ChooseMenue = new Regex("^[1-4]$");  // ("^[]$")
 
 
@@ -24,10 +24,9 @@ namespace Text.Adv.mit_Greg
             Text.Adv.mit_Greg.Start.CreatePlayer();
             Text.Adv.mit_Greg.Start.ChooseFraction();
 
-      
-            int Counter = 0;
-
-            while (Counter == 0)
+            Text.Adv.mit_Greg.City.CreateCity();
+            Text.Adv.mit_Greg.QuestNPC.CreateNPC();
+            while (true)
             {
                 // Console.WriteLine(Game.UserAvatar.STATS);
 
@@ -48,21 +47,17 @@ namespace Text.Adv.mit_Greg
 
                 if (input.ToLower() == "t" || input.ToLower() == "travel")
                 {
-                    Travel.nextCity();
+                    Try1();
                 }
                 else if (input.ToLower() == "l" || input.ToLower() == "Look")
                 {
-                    Quest.StoryLine();
+                    Try2(); 
                 }
-                else if (input.ToLower() == "C" || input.ToLower() == "check")
+                else if (input.ToLower() == "c" || input.ToLower() == "check")
                 {
-                    Player.TravelBag();
+                    Try4(); 
                 }
-                else if (input.ToLower() == "b" || input.ToLower() == "beenden")
-                {
-                    Environment.Exit(1);
-                }
-                else if (input.ToLower() == "v" || input.ToLower() == "verlassen")
+                else if (input.ToLower() == "e" || input.ToLower() == "end")
                 {
                     break;
                 }
@@ -71,9 +66,19 @@ namespace Text.Adv.mit_Greg
                     Console.WriteLine("input is invalid");
                 }
             }
-      
 
-
+        }
+        static void Try1()
+        {
+            Travel.nextCity();
+        }
+        static void Try2()
+        {
+            Quest.StoryLine(Player.p.CurrentCity);
+        }
+        static void Try4()
+        {
+            Player.TravelBag();
         }
 
     }

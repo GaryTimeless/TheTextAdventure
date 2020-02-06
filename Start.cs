@@ -59,6 +59,8 @@ namespace Text.Adv.mit_Greg
             Player.p.potion = 5;
             Player.p.weaponValue = 1;
             Player.p.typ = "warrior";
+            Player.p.CurrentCity = City.Drana;
+            Player.p.Level = 1;
 
             break;
             case 2:
@@ -71,6 +73,8 @@ namespace Text.Adv.mit_Greg
             Player.p.potion = 10;
             Player.p.weaponValue = 1;
             Player.p.typ = "magician";
+            Player.p.CurrentCity = City.Mandrial;
+            Player.p.Level = 1;
 
     
 
