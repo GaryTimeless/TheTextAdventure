@@ -41,7 +41,6 @@ namespace Text.Adv.mit_Greg
                 Please enter with the first letter of given options.
                 1. (S)tart a new game.
                 2. (L)oad a old one.   
-     
                 ");
 
                         Console.WriteLine("please Enter one of the letters in brackets");
