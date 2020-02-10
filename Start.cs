@@ -19,7 +19,7 @@ namespace Text.Adv.mit_Greg
         public static bool mainloop = true;
        
         public static Random rand = new Random();
-
+        
 
         public static void CreatePlayer()
         {
@@ -40,41 +40,20 @@ namespace Text.Adv.mit_Greg
 
             Feel free to look arround, master your discipline and
             encounter legends, myths and the unknown...");
-            Console.WriteLine("Whats your name? ");
-            Regex ChooseName = new Regex("^[s|l]$");
-            while (true)
-            {
-
-                string input = "";
-                while (!ChooseName.IsMatch(input.ToString()))
-                {
-                    try
-                    {
-                        Console.WriteLine("Please enter your name. We hope they will sing songs about it and your opponents will fear it.");
-                        Player.p.name = Console.ReadLine();
-                        Console.ReadKey();
-                    }
-                    catch
-                    {
-                        Console.WriteLine("Invalid");
-                    }
-                }
-
-
-
-
-                Console.Clear();
-                Console.WriteLine("Willkommen " + Player.p.name + " um dich in dieser Welt zurecht zufinden benutze bitte die möglichen Befehle und Enter");
-
-                Console.ReadKey();
-                Console.Clear();
-            }
+                 Console.WriteLine("Whats your name? ");
+    
+          Player.p.name = Console.ReadLine();
+                     Console.ReadKey();
+                         Console.Clear();
+          Console.WriteLine("Willkommen " + Player.p.name + " um dich in dieser Welt zurecht zufinden benutze bitte die möglichen Befehle und Enter");
+           
+            Console.ReadKey();
+            Console.Clear();
         }
-        static Regex ChooseFraktion = new Regex("^[1-2]$");
+        static Regex ChooseFraktion = new Regex("^[1-2]$");// ("^[]$")
         public static void ChooseFraction() 
         {
-                 
-                int  typ = 0;
+            int  typ = 0;
             while (!ChooseFraktion.IsMatch(typ.ToString()))
             {
                 try
@@ -112,7 +91,7 @@ namespace Text.Adv.mit_Greg
             Player.p.CurrentCity = City.Drana;
             Player.p.Level = 1;
 
-                    typ5();
+                    typ6();
 
 
 
@@ -158,6 +137,15 @@ namespace Text.Adv.mit_Greg
 
         static void typ5()
         {
+            Console.Clear();
+            Console.WriteLine(Pics.titel6);
+            Text.Adv.mit_Greg.SaveGame.SaveGameData();
+        }
+
+        static void typ6()
+        {
+            Console.Clear();
+            Console.WriteLine(Pics.titel7);
             Text.Adv.mit_Greg.SaveGame.SaveGameData();
         }
     }
