@@ -201,7 +201,8 @@ namespace Text.Adv.mit_Greg
 
                         Console.WriteLine("You give Imartak the money");
                         Console.ReadKey();
-                        Player.p.Level++;
+                        Player.p.Level++ 
+                            ;
                         Console.WriteLine("Your Level increase: " + Player.p.Level);
                         Console.ReadKey();
                         Console.Clear();

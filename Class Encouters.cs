@@ -20,7 +20,7 @@ namespace Text.Adv.mit_Greg
         public static void BasicFightEncouter()
         {
             Console.Clear();
-            Console.WriteLine("Der nächste Gegner wartet");
+            Console.WriteLine("Teh next ");
             Console.ReadKey();
             Combat(true, "", 0, 0, 0); // Werte des Gegners 
         }
@@ -156,9 +156,9 @@ namespace Text.Adv.mit_Greg
                     }
                     else
                     {
-                        Console.WriteLine("Du trinkst einen Heiltrank");
+                        Console.WriteLine("You take a Healpotion");
                         int potionV = 5;
-                        Console.WriteLine("Du regenerierst " + potionV + " Gesundheit");
+                        Console.WriteLine("You regenerate " + potionV + " health");
                        Player.p.health += potionV;
                     }
 
@@ -168,7 +168,7 @@ namespace Text.Adv.mit_Greg
                 {
                     //Tod
                     Console.Clear();
-                    Console.WriteLine(Player.p.name + " you are dead  " + n + " hat dich besiegt");
+                    Console.WriteLine(Player.p.name + " you are dead  " + n + " did kill you");
                     Console.ReadKey();
                     Console.Clear();
                   //  Console.WriteLine(Program.currentTexturen.titel3);
@@ -182,15 +182,13 @@ namespace Text.Adv.mit_Greg
 
             int c = Player.p.GetCoins();
 
-            Console.WriteLine(@"                               Du hast ihr besiegt der Körper liegt unter dir, deine Fäust 
-                               glühen und sind benetzt von Blut willst du schnell weiter oder
-                               den leblosen Körper durchsuchen?", 120);
+            Console.WriteLine(@" His body is covered in blood, do you want to search for some Items?                             ", 120);
 
             string input1 = Console.ReadLine();
 
-            if (input1.ToLower() == "ja" || input1.ToLower() == "durchsuchen")
+            if (input1.ToLower() == "yes" || input1.ToLower() == "search")
             {
-                Console.WriteLine("Du durchwühlst den leblosen Körper und findest " + c + " Münzen!");
+                Console.WriteLine("you disgrace his body you fund " + c + " Septime !");
                 Player.p.coins += c;
             }
 
@@ -209,19 +207,19 @@ namespace Text.Adv.mit_Greg
                 case 0:
                     return "Zombie";
                 case 1:
-                    return "Wache";
+                    return "guard";
                 case 2:
-                    return "Ritter";
+                    return "Knight";
                 case 3:
-                    return "Gefangener";
+                    return "Prisoner";
                 case 4:
-                    return "Foltermeister";
+                    return "Torture master ";
                 case 5:
                     return "Magier";
                 case 6:
-                    return "Hund";
+                    return "Dog";
                 case 7:
-                    return "Fledermaus";
+                    return "Bat";
                 case 8:
                     return "Vampier";
                 case 9:
