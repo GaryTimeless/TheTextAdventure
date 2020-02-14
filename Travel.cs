@@ -15,7 +15,7 @@ namespace Text.Adv.mit_Greg
 
             Console.WriteLine(@"You are in the City: " + Player.p.CurrentCity.Name + " in " + Player.p.CurrentCity.AreaWhereTheCityIs.Name);
 
-
+            
 
 
 

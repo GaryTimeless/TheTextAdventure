@@ -2,23 +2,16 @@
   <MonoDevelop.Ide.ItemProperties.Text.Adv.mit_220Greg PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Class Encouters.cs">
     <Files>
-      <File FileName="Program.cs" Line="18" Column="59" NotebookId="1" />
-      <File FileName="Player.cs" NotebookId="1" />
-      <File FileName="Start.cs" NotebookId="1" />
-      <File FileName="Travel.cs" NotebookId="1" />
-      <File FileName="Pics.cs" NotebookId="1" />
-      <File FileName="Quest.cs" NotebookId="1" />
-      <File FileName="SaveGame.cs" NotebookId="1" />
-      <File FileName="Shop.cs" NotebookId="1" />
-      <File FileName="Class Encouters.cs" Line="52" Column="17" NotebookId="1" />
+      <File FileName="Program.cs" Line="18" Column="59" />
+      <File FileName="Player.cs" />
+      <File FileName="Start.cs" />
+      <File FileName="Travel.cs" />
+      <File FileName="Pics.cs" />
+      <File FileName="Quest.cs" />
+      <File FileName="SaveGame.cs" />
+      <File FileName="Shop.cs" />
+      <File FileName="Class Encouters.cs" Line="289" Column="35" />
     </Files>
-    <FloatingWindows>
-      <FloatingWindow WindowId="1" X="800" Y="346" Width="640" Height="461">
-        <Files>
-          <File FileName="EmptyCSharpFile.cs" Line="27" Column="46" />
-        </Files>
-      </FloatingWindow>
-    </FloatingWindows>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
