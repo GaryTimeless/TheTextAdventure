@@ -14,7 +14,15 @@ namespace Text.Adv.mit_Greg
             Console.WriteLine(Pics.titel2);
 
         
-            Combat(false, "Rahl:", 15, 4, 4);
+            Combat(false, "Rahl:", 15, 4, 4, Pics.titel2);
+
+        }
+        public static void TarkrotEncounter()
+        {
+            Console.WriteLine(Pics.titel9);
+
+
+            Combat(false, "Tarkrot:", 35, 21, 15, Pics.titel9);
 
         }
         public static void BasicFightEncouter()
@@ -22,7 +30,7 @@ namespace Text.Adv.mit_Greg
             Console.Clear();
             Console.WriteLine("The next ");
             Console.ReadKey();
-            Combat(true, "", 0, 0, 0); // Werte des Gegners 
+            Combat(true, "", 0, 0, 0, ""); // Werte des Gegners 
         }
 
         //Encouter Tool 
@@ -45,7 +53,7 @@ namespace Text.Adv.mit_Greg
             }
 
         }
-        public static void Combat(bool random, string name, int health, int power, int runspeed)// Variablen werden deklariert 
+        public static void Combat(bool random, string name, int health, int power, int runspeed, string Titel)// Variablen werden deklariert 
         {
             string n = "";
             int p = 0;
@@ -73,15 +81,12 @@ namespace Text.Adv.mit_Greg
 
 
                 Console.Clear();
-                Console.WriteLine(Pics.titel2);
+                Console.WriteLine(Titel);
 
 
-                if (CombatTurn == 1)
+                if (CombatTurn == 1) // überprüfe ob Gegner dran ist. 
                 {
-                    CombatOpponent(false, "Rahl:", 15, 4, 4);
-                    //Console.WriteLine("Hier entsteht eine Methode mit der unser Rahl angreifen kann");
-                    
-
+                    CombatOpponent(false, n, p, h, r); // gegner macht entweder Angriff oder er heilt sich -> siehe ganz unten
                 }
                 Console.WriteLine("*                             *");
                 Console.WriteLine(n);
@@ -178,7 +183,7 @@ namespace Text.Adv.mit_Greg
                     }
 
                 }
-                else if (input == "")
+                else if (input == "") // hab mich mehrmals vertippt und dachte es wäre ganz nice bis wir regex anwenden
                 {
                     Console.WriteLine("Please enter one of the given letters in brackets");
                 }
@@ -217,6 +222,7 @@ namespace Text.Adv.mit_Greg
              Player.p.coins += c;
             Console.ReadKey();
         }
+
 
 
         public static string GetName()// Gegner Ausnahme. 

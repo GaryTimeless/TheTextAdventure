@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 
 namespace Text.Adv.mit_Greg
 {
@@ -49,10 +50,30 @@ namespace Text.Adv.mit_Greg
                     Player.p.CurrentCity = Player.p.CurrentCity.nearCityLIST[3];
                     break;
             }
-           
+
             
             Console.WriteLine("You are now in: " + Player.p.CurrentCity.Name + " in " + Player.p.CurrentCity.AreaWhereTheCityIs.Name);
             Console.ReadKey();
+
+            
+            if (QuestNPC.Tarkrot.QuestProgress == 1)
+            {
+                if (Quest.TarkrotThreat > 0)
+                {
+                    Quest.TarkrotThreat -= 1;
+
+                }
+                else if (Quest.TarkrotThreat == 0)
+                {
+                    Console.Clear();
+                    Console.WriteLine(QuestNPC.Tarkrot.Name + ": SO you thought I wouldn't find you. YOU BETRAYED US.");
+                    Console.ReadKey();
+                    Console.WriteLine(QuestNPC.Tarkrot.Name + ": You let us Down. I am disappointed.");
+                    Console.ReadKey();
+                    Class_Encouters.TarkrotEncounter();
+                }
+
+            }
 
 
 

@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 
 namespace Text.Adv.mit_Greg
 {
     class Quest
     {
-
+        public static int TarkrotThreat = 4;
         public static void StoryLine(City QuestCity)
         {
             while (true)
@@ -50,7 +51,7 @@ namespace Text.Adv.mit_Greg
                 if (Player.p.Level < 2)
                 {
                     Console.Clear();
-                    // Class_Encouters.RahlEncouter();
+                   
                    QuestNPC.ImartakQuest();
                 }
             }
@@ -59,7 +60,7 @@ namespace Text.Adv.mit_Greg
                 if (Player.p.Level < 2)
                 {
                     Console.Clear();
-                    // Class_Encouters.RahlEncouter();
+                    
                     QuestNPC.RahlQuest();
                 }
             }
@@ -75,8 +76,9 @@ namespace Text.Adv.mit_Greg
 
         }
         static void Try3()
-        {
-            Console.WriteLine("  As you approach the building, you notice the smell of alcohol, something to eat,\n"
+        { if (Player.p.Level < 2)
+            {
+                Console.WriteLine("  As you approach the building, you notice the smell of alcohol, something to eat,\n"
                               + "         and a mixture of blood and sweat. There is a sign on the outside. Tavern: bold bear.\n" +
                               "          The tavern appears to be an old building. It is damaged in many places. \n" +
                               "          In detail, however,there are some elements typical of Septime. \n" +
@@ -84,8 +86,15 @@ namespace Text.Adv.mit_Greg
                               "          and the windows angular without glass. The characters in the beam of the house \n" +
                               "          that the roof supports are striking. STRONG BODY, STRONG MIND, NO MERCY. \n" +
                               "          But the tavern is closed... ");
-            Console.ReadKey();
-            Console.Clear();
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else
+            {
+               QuestNPC.BlackThornsQuest();
+
+            }
+            
         }
     }
     public class QuestNPC
@@ -93,8 +102,11 @@ namespace Text.Adv.mit_Greg
         public string Name;
         public int QuestProgress;
 
+
         public static QuestNPC Imartak = new QuestNPC();
         public static QuestNPC Rahl = new QuestNPC();
+        public static QuestNPC Tarkrot = new QuestNPC();
+        
 
         public static void CreateNPC()
         {
@@ -104,6 +116,9 @@ namespace Text.Adv.mit_Greg
 
             Rahl.Name = "Rahl";
             Rahl.QuestProgress = 0;
+
+            Tarkrot.Name = "Tarkrot";
+            Tarkrot.QuestProgress = 0;
 
 
 
@@ -271,6 +286,82 @@ namespace Text.Adv.mit_Greg
                     Console.WriteLine("I have paid my dept, so screw you."); // rash müsste evtl verschwinden. 
                     break;
             }
+        }
+
+
+        // Quest description. You meet Tarkrot and his guys from the mercenary group "Black Thorn". If you are unpolite - he kills you. If you are polite, he invites you to help him as food for the Arrows of the enemie
+        // You can't reject this quest. You have to follow the instructions and travel to Tor von Hundrial. There you will help him to fight some city guards. You´ll get some money and a hint
+        // for the next Quest. If you ignore Tarkrots Thread and you travel 4 times without going to the Street of past wars in Tor von Hundrial he will find you and Kill you. 
+        public static void BlackThornsQuest()
+        {
+
+            if (Tarkrot.QuestProgress == 0)
+            {
+                Console.WriteLine("Stranger: Hey you! Whats your name?");
+
+                Console.WriteLine(Player.p.name + ":    1. who is asking?\n" +
+                                                                     "         2. " + Player.p.name);
+
+
+                int NOTHING = Convert.ToInt32(Console.ReadLine());
+                if (NOTHING == 1)
+                {
+                    Console.WriteLine("Stranger : Excuse me... ");
+                    Thread.Sleep(50);
+
+                    Console.WriteLine("Stranger : AND I AM THE ONE WHO ASKS THE QUESTION!");
+                    Console.ReadKey();
+                    Console.WriteLine("Stranger: So again. What is your Name?");
+                    Console.ReadKey();
+                    Console.WriteLine("You notice that some other guys are watching this conversation ready to join. Something is telling you they all belong together...");
+                    Console.ReadKey();
+
+                    Console.WriteLine(Player.p.name + ":    1. Don't bother me...\n" +
+                                                                     "         2. " + Player.p.name);
+
+                    NOTHING = Convert.ToInt32(Console.ReadLine());
+                    if (NOTHING == 1)
+                    {
+                        Class_Encouters.TarkrotEncounter(); // der Gedanke hier ist, dass Tarkrot zu stark ist. Tarkrot soll nicht sterben.
+
+                    }
+
+                }
+                else if (NOTHING == 2)
+                {
+                    Console.WriteLine("Stranger :" + Player.p.name + "... ");
+                    Console.ReadKey();
+                    Console.WriteLine("Stranger: what a rediculous name * laughing *");
+                    Console.ReadKey();
+                    Console.WriteLine(QuestNPC.Tarkrot.Name + ": My Name is Tarkrot. And I am offering you an offer");
+
+
+                }
+
+                Console.WriteLine(QuestNPC.Tarkrot.Name + ": My friends and I are going to The City Tor von Hundrial. Our Client pays us to get rid of some people");
+                Console.WriteLine(QuestNPC.Tarkrot.Name + ": WE ARE THE FAMOUS: Black Thorns and from time to time, we hire some rookies as food for the arrrows of the enemie * laughing *  ");
+                Console.ReadKey();
+                Console.WriteLine(QuestNPC.Tarkrot.Name + ": And for our entertainment");
+                Console.ReadKey();
+                Console.WriteLine(QuestNPC.Tarkrot.Name + ": So we see you there. Walk along the street and be aware of the city guards. Some of them are sneaky basterds");
+                Console.WriteLine(QuestNPC.Tarkrot.Name + ": And don't try to fool me. If you don't appear, i'll come and get you!");
+                Console.WriteLine();
+                Console.WriteLine();
+                Console.WriteLine();
+                Console.ReadKey();
+
+                Console.WriteLine("Tarkrot and his friends from the Black Thorns are leaving the tavern. You can travel 4 times to find them before Tarkrot finds you.... ");
+                Console.ReadKey();
+                Tarkrot.QuestProgress = 1;
+            }
+            else if (Tarkrot.QuestProgress == 1)
+            {
+                Console.WriteLine("hier kommt die Methode für die Taverne ohne Quest");
+            }
+
+
+
+
         }
 
 
