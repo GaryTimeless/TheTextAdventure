@@ -142,8 +142,9 @@ namespace Text.Adv.mit_Greg
             Bort.StreetsName = "street of vengeful sinners";
             Bort.TavernName = "suicide silence";
 
-
-
+            // Tor von Hundrial
+            TorVonHundrial.StreetsName = "steet of eccedentesiast";// someone who is hides pain behind a smile
+            TorVonHundrial.TavernName = "ethereal"; // extremly delicate light not of this world
           
 
             SpringOfNasmah.Name = " spring of Nasmah";

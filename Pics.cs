@@ -4,9 +4,9 @@ using System.Text;
 
 namespace Text.Adv.mit_Greg
 {
-    class Pics 
-    { 
-    public static string title = @"
+    class Pics
+    {
+        public static string title = @"
                                                   |>>>
                                                   |
                                     |>>>      _  _|_  _         |>>>
@@ -29,7 +29,7 @@ namespace Text.Adv.mit_Greg
 
                             ";
 
-    public static string titel6 = @"
+        public static string titel6 = @"
                   .'* *.'
                                __/_*_*(_
                               / _______ \
@@ -109,7 +109,7 @@ namespace Text.Adv.mit_Greg
 
 
 
-        public static string titel8 =@"
+        public static string titel8 = @"
 
 
 
@@ -117,7 +117,7 @@ namespace Text.Adv.mit_Greg
 
 ";
 
-    public static string titel2 = @" 
+        public static string titel2 = @" 
                       ////^\\\\
                       | ^   ^ |
                      @ (o) (o) @
@@ -134,7 +134,7 @@ namespace Text.Adv.mit_Greg
                   \ \ |________| / /
                    \ \|
                         ";
-    public static string titel3 = @"
+        public static string titel3 = @"
                         _gxXXXXXXXXXXXXXXXXXXXXXXXX!x_
                    __x!XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX!x_
                 ,gXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx_
@@ -203,7 +203,7 @@ namespace Text.Adv.mit_Greg
                                        ~~
 
                             ";
-    public static string titel4 = @"
+        public static string titel4 = @"
                _|=|__________
               /              \
              /                \
@@ -214,7 +214,7 @@ namespace Text.Adv.mit_Greg
          ( )|-|-|-|====|-|-|-|( ) 
          ^^^^^^^^^^====^^^^^^^^^^^                              ";
 
-    public static string titel5 = @"
+        public static string titel5 = @"
 
 |.'',                                     ,''.|
 |.'.'',                                 ,''.'.|
@@ -276,6 +276,58 @@ J |   |J:::::::||    |  | |    _/\     |
           |\\|-.____     |__.-'    |       \::. \
           | >||      `--' J        |        `::\ `.
           |//JJ        |   L       |          \::. \";
-    
-}
+
+
+        public static string titel11 = @"
+,   A           {}
+ / \, | ,        .--.
+|    =|= >      /.--.\
+ \ /` | `       |====|
+  `   |         |`::`|  
+      |     .-;`\..../`;_.-^-._
+     /\\/  /  |...::..|`   :   `|
+     |:'\ |   /'''::''|   .:.   |
+      \ /\;-,/\   ::  |..:::::..|
+      |\ <` >  >._::_.| ':::::' |
+      | `""`  /   ^^  |   ':'   |
+      |       |       \    :    /
+      |       |        \   :   / 
+      |       |___/\___|`-.:.-`
+      |        \_ || _/    `
+      |        <_ >< _>
+      |        |  ||  |
+      |        |  ||  |
+      |       _\.:||:./_
+      |      /____/\____\";
+
+
+
+        public static string titel12= @"
+
+      _,.
+    ,` -.)
+   ( _/-\\-._
+  /,|`--._,-^|            ,
+  \_| |`-._/||          ,'|
+    |  `-, / |         /  /
+    |     || |        /  /
+     `r-._||/   __   /  /
+ __,-<_     )`-/  `./  /
+'  \   `---'   \   /  /
+    |           |./  /
+    /           //  /
+\_/' \         |/  /
+ |    |   _,^-'/  /
+ |    , ``  (\/  /_
+  \,.->._    \X-=/^
+  (  /   `-._//^`
+   `Y-.____(__}
+    |     {__)
+          ()        ";
+
+
+
+
+
+    }
 }

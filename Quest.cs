@@ -31,7 +31,7 @@ namespace Text.Adv.mit_Greg
                 }
                 if (input.ToLower() == "c" || input.ToLower() == "check")
                 {
-                    Try3(); 
+                    Try3(QuestCity); 
                 }
                 if (input.ToLower() == "b" || input.ToLower() == "back")
                 {
@@ -71,28 +71,73 @@ namespace Text.Adv.mit_Greg
                     Console.Clear();
                     Class_Encouters.BasicFightEncouter();
                 }
+                if (Player.p.Level == 2)
+                {
+                    QuestNPC.TarkrotQuest();
+                }
             }
 
 
         }
-        static void Try3()
-        { if (Player.p.Level < 2)
+        static void Try3(City QuestCity2)
+        {
+            if (QuestCity2 == City.Drana)
             {
-                Console.WriteLine("  As you approach the building, you notice the smell of alcohol, something to eat,\n"
-                              + "         and a mixture of blood and sweat. There is a sign on the outside. Tavern: bold bear.\n" +
-                              "          The tavern appears to be an old building. It is damaged in many places. \n" +
-                              "          In detail, however,there are some elements typical of Septime. \n" +
-                              "          The basic structure is made of Septimetan wood. The walls made of clay and stones \n" +
-                              "          and the windows angular without glass. The characters in the beam of the house \n" +
-                              "          that the roof supports are striking. STRONG BODY, STRONG MIND, NO MERCY. \n" +
-                              "          But the tavern is closed... ");
-                Console.ReadKey();
-                Console.Clear();
-            }
-            else
-            {
-               QuestNPC.BlackThornsQuest();
 
+                if (Player.p.Level < 2)
+                {
+                    Console.WriteLine("  As you approach the building, you notice the smell of alcohol, something to eat,\n"
+                                    + "         and a mixture of blood and sweat. There is a sign on the outside. Tavern: bold bear.\n" +
+                                    "          The tavern appears to be an old building. It is damaged in many places. \n" +
+                                    "          In detail, however,there are some elements typical of Septime. \n" +
+                                    "          The basic structure is made of Septimetan wood. The walls made of clay and stones \n" +
+                                    "          and the windows angular without glass. The characters in the beam of the house \n" +
+                                    "          that the roof supports are striking. STRONG BODY, STRONG MIND, NO MERCY. \n" +
+                                    "          But the tavern is closed... ");
+                    Console.ReadKey();
+                    Console.Clear();
+                }
+                
+            }
+            if (QuestCity2 == City.Bort)
+            {
+
+                if (Player.p.Level < 2)
+                {
+                    Console.WriteLine("  As you approach the building, you notice the smell of alcohol, something to eat,\n"
+                                    + "         and a mixture of blood and sweat. There is a sign on the outside. Tavern: bold bear.\n" +
+                                    "          The tavern appears to be an old building. It is damaged in many places. \n" +
+                                    "          In detail, however,there are some elements typical of Septime. \n" +
+                                    "          The basic structure is made of Septimetan wood. The walls made of clay and stones \n" +
+                                    "          and the windows angular without glass. The characters in the beam of the house \n" +
+                                    "          that the roof supports are striking. STRONG BODY, STRONG MIND, NO MERCY. \n" +
+                                    "          But the tavern is closed... ");
+                    Console.ReadKey();
+                    Console.Clear();
+                }
+
+            }
+            if (QuestCity2 == City.TorVonHundrial)
+            {
+
+                if (Player.p.Level < 2)
+                {
+                    Console.WriteLine("  As you approach the building, you notice the smell of alcohol, something to eat,\n"
+                                    + "         and a mixture of blood and sweat. There is a sign on the outside. Tavern: bold bear.\n" +
+                                    "          The tavern appears to be an old building. It is damaged in many places. \n" +
+                                    "          In detail, however,there are some elements typical of Septime. \n" +
+                                    "          The basic structure is made of Septimetan wood. The walls made of clay and stones \n" +
+                                    "          and the windows angular without glass. The characters in the beam of the house \n" +
+                                    "          that the roof supports are striking. STRONG BODY, STRONG MIND, NO MERCY. \n" +
+                                    "          But the tavern is closed... ");
+                    Console.ReadKey();
+                    Console.Clear();
+                }
+                else if (Player.p.Level == 2)
+                {
+                    QuestNPC.BlackThornsQuest();
+
+                }
             }
             
         }
@@ -360,6 +405,61 @@ namespace Text.Adv.mit_Greg
             }
 
 
+
+
+        }
+
+
+        public static void TarkrotQuest()
+        {
+            
+            Console.WriteLine("You walk along the " + City.TorVonHundrial.StreetsName + " in the City " + City.TorVonHundrial.Name + ".");
+            Console.WriteLine("The city is known for the only easy path which leads to the Area "+ City.SaeIlaas.AreaWhereTheCityIs.Name + " & " + City.Metherwhere.Name + ".");
+            Console.ReadKey();
+            Console.WriteLine("While you walk towards the edge of the town....");
+            Console.ReadKey();
+            Console.WriteLine(QuestNPC.Tarkrot.Name + ": psssst.....");
+            Console.ReadKey();
+            Console.WriteLine(QuestNPC.Tarkrot.Name + " grabs you and drags you into an alley.");
+            Console.WriteLine(QuestNPC.Tarkrot.Name + @": Listen close! I only tell you once. There will be a group of guards comming along this street.
+                                                          They are probably be about 10. You will attack them all alone at once *laughing*
+                                                          If you got all the attention, we will attack them from behind.");
+            Console.ReadKey();
+            Console.WriteLine(QuestNPC.Tarkrot.Name + @": GOT IT?");
+            Console.ReadKey();
+            Console.WriteLine(Player.p.name + @": 1. Yes. but watch out, otherwise everyone will be dead before you and your people have drawn your weapons
+                                                 2. ... As if I have a choise");
+
+            int ChooseAnswer = Convert.ToInt32(Console.ReadLine());
+
+
+            Console.WriteLine("Tarkrot leaves you alone. And you try to recognize those guards...");
+            Console.ReadKey();
+            Console.WriteLine("After a while there are some guards comming across the street.");
+            Console.ReadKey();
+            Console.WriteLine("You wait...");
+            Console.ReadKey();
+            Console.WriteLine("a little longer...");
+            Console.ReadKey();
+            Console.WriteLine("NOW!");
+
+            Class_Encouters.GroupGuardEncouter();
+
+
+            Console.WriteLine(QuestNPC.Tarkrot.Name + ": Show no merci!!!");
+            Console.ReadKey();
+
+            Console.WriteLine("Tarkrot and the black Thorns came out and kill the rest of the group. Fast and loud");
+            Console.ReadKey();
+
+            Console.WriteLine(QuestNPC.Tarkrot.Name + "Well done you little rookie. I remember good fighters. Take this money and get out of my way.");
+            Console.ReadKey();
+            QuestNPC.Tarkrot.QuestProgress = 3;
+            Player.p.coins += 350;
+            Console.WriteLine("Tarkrot gibt dir 350 Septime");
+            Player.p.Level += 1;
+            Console.WriteLine("Your Level: " + Player.p.Level);
+            Console.ReadKey();
 
 
         }

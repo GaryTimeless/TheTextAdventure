@@ -1,23 +1,19 @@
 ﻿<Properties StartupConfiguration="{620B9160-C02E-47F6-BD27-775E7C214F62}|Default">
   <MonoDevelop.Ide.ItemProperties.Text.Adv.mit_220Greg PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Travel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Quest.cs">
     <Files>
-      <File FileName="Program.cs" Line="181" Column="1" />
-      <File FileName="Player.cs" Line="1" Column="1" />
-      <File FileName="Start.cs" Line="1" Column="1" />
-      <File FileName="Travel.cs" Line="63" Column="46" />
-      <File FileName="Pics.cs" Line="239" Column="36" />
-      <File FileName="Quest.cs" Line="10" Column="44" />
+      <File FileName="Pics.cs" Line="281" Column="38" />
+      <File FileName="Quest.cs" Line="457" Column="48" />
       <File FileName="SaveGame.cs" />
       <File FileName="Shop.cs" />
-      <File FileName="Class Encouters.cs" Line="41" Column="34" />
+      <File FileName="Class Encouters.cs" Line="44" Column="46" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Text.Adv.mit Greg" expanded="True">
             <Node name="Text.Adv.mit Greg" expanded="True">
-              <Node name="Travel.cs" selected="True" />
+              <Node name="Quest.cs" selected="True" />
             </Node>
           </Node>
         </State>

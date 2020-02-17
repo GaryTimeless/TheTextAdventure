@@ -32,6 +32,17 @@ namespace Text.Adv.mit_Greg
             Console.ReadKey();
             Combat(true, "", 0, 0, 0, ""); // Werte des Gegners 
         }
+        public static void GroupGuardEncouter()
+        {
+            Console.WriteLine(Pics.titel11);
+
+
+            Combat(false, "Guard1:", 9, 3, 1, Pics.titel11);
+
+            Console.WriteLine(Pics.titel12);
+
+            Combat(false, "Guard2:", 12, 4, 1, Pics.titel12);
+        }
 
         //Encouter Tool 
         public static void Print(string text, int speed = 40)
