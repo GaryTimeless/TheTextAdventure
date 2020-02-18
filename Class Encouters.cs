@@ -11,7 +11,7 @@ namespace Text.Adv.mit_Greg
         //Encouters
         public static void RahlEncouter()
         {
-            Console.WriteLine(Pics.titel2);
+            
 
         
             Combat(false, "Rahl:", 15, 4, 4, Pics.titel2);
@@ -19,7 +19,7 @@ namespace Text.Adv.mit_Greg
         }
         public static void TarkrotEncounter()
         {
-            Console.WriteLine(Pics.titel9);
+            
 
 
             Combat(false, "Tarkrot:", 35, 21, 15, Pics.titel9);
@@ -34,12 +34,12 @@ namespace Text.Adv.mit_Greg
         }
         public static void GroupGuardEncouter()
         {
-            Console.WriteLine(Pics.titel11);
+            
 
 
             Combat(false, "Guard1:", 9, 3, 1, Pics.titel11);
 
-            Console.WriteLine(Pics.titel12);
+            
 
             Combat(false, "Guard2:", 12, 4, 1, Pics.titel12);
         }
@@ -299,7 +299,9 @@ namespace Text.Adv.mit_Greg
                     damage = damage - (h / 2);
                 }
 
-                int attack = rand.Next(1, p) + rand.Next(1, 4); // es gibt kein weapon value... evtl nachCoden.
+                int attack = rand.Next(1, p); // es gibt kein weapon value... evtl nachCoden.
+                if (attack > (Player.p.health / 2))
+                    { attack /=  2; }
 
                 Console.WriteLine(n + "verliert " + damage + " Gesundheit und fügt dir " + attack + " Schaden zu");
                 Console.WriteLine();

@@ -66,7 +66,7 @@ namespace Text.Adv.mit_Greg
             }
             else if (QuestCity2 == City.TorVonHundrial)
             {
-                if (Player.p.Level > 1)
+                if (Player.p.Level <= 1)
                 {
                     Console.Clear();
                     Class_Encouters.BasicFightEncouter();
@@ -84,7 +84,7 @@ namespace Text.Adv.mit_Greg
             if (QuestCity2 == City.Drana)
             {
 
-                if (Player.p.Level < 2)
+                if (Player.p.Level < 10)
                 {
                     Console.WriteLine("  As you approach the building, you notice the smell of alcohol, something to eat,\n"
                                     + "         and a mixture of blood and sweat. There is a sign on the outside. Tavern: bold bear.\n" +
@@ -102,7 +102,7 @@ namespace Text.Adv.mit_Greg
             if (QuestCity2 == City.Bort)
             {
 
-                if (Player.p.Level < 2)
+                if (Player.p.Level < 10)
                 {
                     Console.WriteLine("  As you approach the building, you notice the smell of alcohol, something to eat,\n"
                                     + "         and a mixture of blood and sweat. There is a sign on the outside. Tavern: bold bear.\n" +

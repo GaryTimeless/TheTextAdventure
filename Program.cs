@@ -166,7 +166,8 @@ namespace Text.Adv.mit_Greg
                                    "Coins: " + Player.p.coins + "\n" +
                                    "Potion: " + Player.p.potion + "\n" +
 
-                                   "Level: " + Player.p.Level);
+                                   "Level: " + Player.p.Level+ "\n" +
+                                   "current City: " + Player.p.CurrentCity.Name);
 
                         Console.WriteLine(@"
                 
