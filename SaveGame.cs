@@ -6,16 +6,73 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text.RegularExpressions;
+using System.Runtime.Serialization;
+using System.Xml.Serialization;
 
 namespace Text.Adv.mit_Greg
 {
     public class SaveGame
     {
 
-       
-        
 
 
+        // klappt noch nicht. Arbeite daran.
+        public static void SaveGameDataSerialXML()
+        {
+
+            
+           XmlSerializer SaveData = new XmlSerializer(typeof(Player));
+            
+
+            using (TextWriter WriteSaveData = new StreamWriter(Player.p.name + ".dat"))
+            {
+
+                SaveData.Serialize(WriteSaveData, Player.p);
+
+            }
+        }
+        public static void LoadGameDataSerialXML()
+        {
+
+            XmlSerializer LoadData = new XmlSerializer(typeof(Player));
+
+            using (TextReader ReadLoadData = new StreamReader(Player.p.name + ".dat"))
+            {
+                Player.p = (Player)LoadData.Deserialize(ReadLoadData);
+            }
+        }
+
+    
+        // funktioniert, wäre aber cooler wenn XML klappt
+        public static void SaveGameDataSERIALBINARY()
+        {
+            BinaryFormatter SaveAvatarData = new BinaryFormatter();
+            FileStream DataPath = new FileStream(Player.p.name + ".txt", FileMode.Create, FileAccess.Write);
+
+            SaveAvatarData.Serialize(DataPath, Player.p);
+            DataPath.Close();
+
+            Console.WriteLine("YOU SAVED YOUR DATA");
+            Console.ReadKey();
+
+
+
+
+        }
+        public static void LoadGameDataSERIALBINARY()
+        {
+            BinaryFormatter LoadAvatarData = new BinaryFormatter();
+
+            Console.WriteLine("Bitte gebe den Namen ein um dein Spiel zu laden");
+            Player.p.name = Console.ReadLine();
+
+            FileStream DataPath = new FileStream(Player.p.name + ".txt", FileMode.Open, FileAccess.Read);
+
+            Player.p = (Player)LoadAvatarData.Deserialize(DataPath);
+
+        }
+
+        // just a .txt -> will be deleted soon.
         public static void SaveGameData()
         {
 

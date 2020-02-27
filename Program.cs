@@ -140,14 +140,16 @@ namespace Text.Adv.mit_Greg
             }
             static void Try8()
             {
-                Text.Adv.mit_Greg.SaveGame.LoadPlayerData();
+                //Text.Adv.mit_Greg.SaveGame.LoadPlayerData(); // OLD ONE -> will be deleted
+                //Text.Adv.mit_Greg.SaveGame.LoadGameDataSerialXML(); // not working right now
+
+
+                Text.Adv.mit_Greg.SaveGame.LoadGameDataSERIALBINARY(); // Works fine, but will be replaced with XML
+
             }
 
             while (true)
             {
-                // Console.WriteLine(Game.UserAvatar.STATS);
-
-                //  Console.WriteLine(Game.UserAvatar.CurrentCity.Name);
                 Console.Clear();
                 string input = "";
                 while (!ChooseMainMenue.IsMatch(input.ToString()))
@@ -190,7 +192,8 @@ namespace Text.Adv.mit_Greg
 
                 if (input.ToLower() == "s" || input.ToLower() == "save")
                 {
-                    Try7();
+                    Try7(); // save data
+                    
                 }
                else  if (input.ToLower() == "t" || input.ToLower() == "travel")
                 {
@@ -229,7 +232,10 @@ namespace Text.Adv.mit_Greg
         }
         static void Try7()
         {
-            Text.Adv.mit_Greg.SaveGame.SaveGameData();
+            //Text.Adv.mit_Greg.SaveGame.SaveGameData(); // old one, will be deleted
+            //Text.Adv.mit_Greg.SaveGame.SaveGameDataSerialXML(); // not working right now
+
+            Text.Adv.mit_Greg.SaveGame.SaveGameDataSERIALBINARY(); //  Works fine, but will be replaced with XML
         }
 
     }

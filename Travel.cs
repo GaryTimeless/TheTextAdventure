@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading;
-
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
+using System.Xml.Serialization;
 namespace Text.Adv.mit_Greg
 {
     class Travel
@@ -82,15 +85,32 @@ namespace Text.Adv.mit_Greg
         }
  
     }
-
-    public class Area
+    [Serializable()]
+    public class Area : ISerializable
     {
         public string Name;
         public string City;
+        public Area() { }
+
+        public void GetObjectData(SerializationInfo info, StreamingContext context)
+        {
+            info.AddValue("Name", Name);
+            info.AddValue("City", City);
+        }
+
+        public Area(SerializationInfo info, StreamingContext context)
+        {
+            Name = (string)info.GetValue("Name", typeof(string));
+            City = (string)info.GetValue("City", typeof(string));
+
+        }
+
+        
 
 
     }
-    public class City
+    [Serializable()]
+    public class City : ISerializable
     {
         public string Name;
         public Area AreaWhereTheCityIs;
@@ -100,11 +120,6 @@ namespace Text.Adv.mit_Greg
        
         public string StreetsName;
         public string TavernName;
-
-        // public List<QuestNPC> StreetNPCList;
-        //public List<QuestNPC> TavernNPCList;
-
-
 
         public static Area ForestOfRaash = new Area(), SpringOfNasmah = new Area(), Metherwhere = new Area();
         public static City Drana = new City(), Bort = new City(), TorVonHundrial = new City(), Ranador = new City(), Mandrial = new City(), SaeIlaas = new City(), Openworld = new City();
@@ -176,7 +191,28 @@ namespace Text.Adv.mit_Greg
 
         }
 
+        public void GetObjectData(SerializationInfo info, StreamingContext context)
+        {
+            info.AddValue("Name", Name);
+            info.AddValue("AreaWhereTheCityIs", AreaWhereTheCityIs);
+            info.AddValue("nearCityLIST", nearCityLIST);
+            info.AddValue("StreetsName", StreetsName);
+            info.AddValue("TavernName", TavernName);
 
+        }
+
+        public City(SerializationInfo info, StreamingContext context)
+        {
+            Name = (string)info.GetValue("Name", typeof(string));
+            AreaWhereTheCityIs = (Area)info.GetValue("AreaWhereTheCityIs", typeof(Area));
+            nearCityLIST = (List<City>)info.GetValue("nearCityLIST", typeof(City));
+
+        }
+
+        public City()
+        {
+        }
+        
     }
 
    

@@ -23,11 +23,11 @@ namespace Text.Adv.mit_Greg
 
                 if (input.ToLower() == "g" || input.ToLower() == "go")
                 {
-                    Try1();
+                    Try1();//load shop
                 }
                 if (input.ToLower() == "w" || input.ToLower() == "walk")
                 {
-                    Try2(QuestCity);
+                    Try2(QuestCity);// walk arround street
                 }
                 if (input.ToLower() == "c" || input.ToLower() == "check")
                 {
@@ -46,16 +46,15 @@ namespace Text.Adv.mit_Greg
         }
         static void Try2(City QuestCity2)
         {
-            if (QuestCity2 == City.Drana)
+            if (QuestCity2.Name == City.Drana.Name)
             {
                 if (Player.p.Level < 2)
                 {
                     Console.Clear();
-                   
-                   QuestNPC.ImartakQuest();
+                    QuestNPC.ImartakQuest();
                 }
             }
-            else if (QuestCity2 == City.Bort)
+            else if (QuestCity2.Name == City.Bort.Name)
             {
                 if (Player.p.Level < 2)
                 {
@@ -64,7 +63,7 @@ namespace Text.Adv.mit_Greg
                     QuestNPC.RahlQuest();
                 }
             }
-            else if (QuestCity2 == City.TorVonHundrial)
+            else if (QuestCity2.Name == City.TorVonHundrial.Name)
             {
                 if (Player.p.Level <= 1)
                 {
@@ -81,7 +80,7 @@ namespace Text.Adv.mit_Greg
         }
         static void Try3(City QuestCity2)
         {
-            if (QuestCity2 == City.Drana)
+            if (QuestCity2.Name == City.Drana.Name)
             {
 
                 if (Player.p.Level < 10)
@@ -99,7 +98,7 @@ namespace Text.Adv.mit_Greg
                 }
                 
             }
-            if (QuestCity2 == City.Bort)
+            if (QuestCity2.Name == City.Bort.Name)
             {
 
                 if (Player.p.Level < 10)
@@ -117,7 +116,7 @@ namespace Text.Adv.mit_Greg
                 }
 
             }
-            if (QuestCity2 == City.TorVonHundrial)
+            if (QuestCity2.Name == City.TorVonHundrial.Name)
             {
 
                 if (Player.p.Level < 2)
