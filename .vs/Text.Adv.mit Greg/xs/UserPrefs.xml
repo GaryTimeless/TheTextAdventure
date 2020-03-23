@@ -4,25 +4,14 @@
     <Files>
       <File FileName="Pics.cs" Line="281" Column="38" />
       <File FileName="Quest.cs" />
-      <File FileName="SaveGame.cs" Line="19" Column="45" />
+      <File FileName="SaveGame.cs" />
       <File FileName="Shop.cs" />
       <File FileName="Class Encouters.cs" />
-      <File FileName="Travel.cs" Line="108" Column="9" />
+      <File FileName="Travel.cs" />
       <File FileName="Start.cs" />
       <File FileName="Program.cs" Line="238" Column="113" />
-      <File FileName="Player.cs" Line="74" Column="39" />
+      <File FileName="Player.cs" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="Text.Adv.mit Greg" expanded="True">
-            <Node name="Text.Adv.mit Greg" expanded="True">
-              <Node name="Program.cs" selected="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
