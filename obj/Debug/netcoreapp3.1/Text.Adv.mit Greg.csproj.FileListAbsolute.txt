@@ -1,4 +1,3 @@
-/Users/gregoryschenk/Documents/GitHub/TheTextAdventure/bin/Debug/netcoreapp3.1/Text.Adv.mit Greg
 /Users/gregoryschenk/Documents/GitHub/TheTextAdventure/bin/Debug/netcoreapp3.1/Text.Adv.mit Greg.deps.json
 /Users/gregoryschenk/Documents/GitHub/TheTextAdventure/bin/Debug/netcoreapp3.1/Text.Adv.mit Greg.runtimeconfig.json
 /Users/gregoryschenk/Documents/GitHub/TheTextAdventure/bin/Debug/netcoreapp3.1/Text.Adv.mit Greg.runtimeconfig.dev.json

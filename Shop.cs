@@ -81,7 +81,12 @@ namespace Text.Adv.mit_Greg
                     Console.WriteLine("Eingabe nicht ´bekannt");
                 }
 
-            }
+
+
+                
+
+
+    }
         }
         static void TryBuy(string item, int cost, Player p)
         {
